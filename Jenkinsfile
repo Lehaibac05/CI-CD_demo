@@ -20,7 +20,7 @@ pipeline {
                 bat 'mkdir C:\\WOR_cicd'
 
                 echo 'Copying to IIS folder...'
-                bat 'xcopy /E /Y /I /R "%WORKSPACE%\\publish\\*" "C:\\WOR_cicd\\"'
+                bat 'xcopy /E /Y /I /R "%WORKSPACE%\\*" "C:\\WOR_cicd\\"'
 
                 echo 'Starting IIS again...'
                 bat 'iisreset /start'
